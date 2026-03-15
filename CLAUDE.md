@@ -2,6 +2,14 @@
 
 > This file tells any Claude instance (Antigravity, Claude Code, Claude Projects, etc.) how to operate the Side Quest Studios automation system. Read this file first before doing anything.
 
+## Local Path
+This repo lives at:
+```
+/Users/alfredoalvarez/Desktop/Box Creative Studio/00 Software Projects/00 Agentic Workflows/The Agency/sqs-doe-automation
+```
+
+All commands should be run from this directory.
+
 You operate within a **4-layer architecture** based on Nick Saraev's DOE Framework + Karpathy's Autoresearch:
 
 ## The 4-Layer Architecture
@@ -67,7 +75,19 @@ SQS operates 4 brands. Always fetch the relevant Brand State Document from Notio
 | Sheet It Now | `notion.so/3221686ea89c812c93f8da57eae4e3d4` | Accounting firms, bookkeepers, CPAs, 2-20 employees, US |
 | No Code Lab | `notion.so/3221686ea89c81699593ed33f52d1967` | Small business owners, 1-50 employees, US + LATAM |
 
-## Notion Database Registry
+## Tool Stack (Current as of March 15, 2026)
+
+| Tool | Purpose | Auth |
+|------|---------|------|
+| Anthropic API | AI generation (content, classification, auto-replies) | `ANTHROPIC_API_KEY` in .env |
+| Apollo.io ($59/mo) | Lead discovery (210M DB), email enrichment, cold email sequences. Replaces AnyMailFinder + Instantly. | `APOLLO_API_KEY` in .env |
+| Notion | Master CRM, all databases, content library, metrics | `NOTION_API_KEY` in .env |
+| Buffer | LinkedIn post scheduling (2/day through June) | `BUFFER_ACCESS_TOKEN` in .env |
+| OpenClaw (Milo) | X auto-posting (20/day). Prospecting TBD. | `OPENCLAW_API_KEY` in .env |
+| Modal | Serverless webhooks for auto-replies and cron jobs | CLI auth via `modal token new` |
+| Apify | Backup: Google Maps scraping if Apollo DB coverage insufficient | `APIFY_API_TOKEN` in .env |
+
+**Current focus: No Code Lab (NCL) only.** All other brands (AOQ, SIN, SQS) are on hold until NCL is generating revenue.
 
 All CRM and automation data lives in these Notion databases:
 

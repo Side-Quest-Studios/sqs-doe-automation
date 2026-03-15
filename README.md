@@ -27,9 +27,8 @@ All data flows through **Notion** (CRM, metrics, content library, experiment log
 ## Quick Start
 
 ```bash
-# 1. Clone this repo
-git clone https://github.com/[your-username]/sqs-doe-automation.git
-cd sqs-doe-automation
+# 1. Navigate to the repo
+cd "/Users/alfredoalvarez/Desktop/Box Creative Studio/00 Software Projects/00 Agentic Workflows/The Agency/sqs-doe-automation"
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -37,7 +36,14 @@ pip install -r requirements.txt
 # 3. Copy .env.example to .env and fill in your API keys
 cp .env.example .env
 
-# 4. Point your Claude instance at CLAUDE.md and start working
+# 4. Test your connections
+python execution/apollo_client.py test
+python execution/notion_client_sqs.py test
+
+# 5. Run first lead discovery (dry run)
+python execution/ncl_discover_leads.py --limit 10 --dry-run
+
+# 6. Point your Claude instance at CLAUDE.md and start working
 ```
 
 ## How to Use
