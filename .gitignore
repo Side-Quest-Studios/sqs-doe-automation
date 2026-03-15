@@ -1,0 +1,25 @@
+# Secrets — NEVER commit
+.env
+credentials.json
+token.json
+
+# Temporary files
+.tmp/
+results/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

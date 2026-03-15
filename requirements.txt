@@ -1,0 +1,25 @@
+# Core AI/LLM
+anthropic>=0.40.0
+
+# Notion (replaces Google Sheets as primary data layer)
+notion-client>=2.0.0
+
+# Google Services (for intermediate processing if needed)
+google-auth>=2.36.0
+google-auth-oauthlib>=1.2.0
+google-api-python-client>=2.160.0
+gspread>=6.1.0
+
+# Web Scraping & Automation
+apify-client>=1.8.0
+beautifulsoup4>=4.12.0
+httpx>=0.28.0
+requests>=2.32.0
+html2text>=2024.2.0
+
+# Data Processing
+pandas>=2.2.0
+
+# Infrastructure
+modal>=0.73.0
+python-dotenv>=1.0.0
